@@ -49,7 +49,10 @@ import { ref } from 'vue';
 
 <style scoped>
 header {
-    background-color: rgba(40, 77, 128, 0.678);
+    background-color: rgb(40, 77, 128);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 li {
@@ -66,7 +69,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24px;
     width: 80%;
     margin: 0 auto;
 }
