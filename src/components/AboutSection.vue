@@ -92,4 +92,42 @@
 .about_content .main_title .btn:hover {
     transform: scale(1.1)
 }
+
+@media (max-width: 768px) {
+    .about {
+        padding: 40px 40px;
+    }
+
+    .about_area {
+        width: auto;
+    }
+
+    .about_content {
+        flex-direction: column;
+    }
+
+    .about_content .about_img {
+        width: auto;
+        padding-bottom: 20px;
+    }
+
+    .about_content .about_img img {
+        width: 270px;
+    }
+
+
+    .about_content .main_title {
+        width: auto;
+    }
+
+    .about_content .main_title h2 {
+        line-height: 35px;
+    }
+
+
+
+
+
+
+}
 </style>

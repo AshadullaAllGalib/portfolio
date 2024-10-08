@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-
+const isMenuOpen = ref(false);
 // const hamburger = ref(document.querySelector(".hamburger"));
 // const navMenu = ref(document.querySelector(".nav-menu"));
 
@@ -23,7 +23,7 @@ import { ref } from 'vue';
                 <img src="../assets/images/logo.PNG" alt="Logo" />
             </a>
 
-            <ul class="nav-menu">
+            <ul class="nav-menu" :class="{ 'active': isMenuOpen }">
                 <li class="nav-item">
                     <a href="#" class="nav-link">Home</a>
                 </li>
@@ -38,7 +38,8 @@ import { ref } from 'vue';
                 </li>
             </ul>
 
-            <div class="hamburger">
+            <div class="hamburger" :class="{ 'active': isMenuOpen }"
+                @click.prevent="isMenuOpen = !isMenuOpen">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -89,15 +90,26 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+}
+
+.nav-item {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.nav-item .active {
+    background: red;
 }
 
 .nav-link {
     transition: 0.7s ease;
+    font-size: 18px;
 }
 
 .nav-link:hover {
-    color: rgb(2, 40, 78);
+    color: rgb(206, 218, 230);
 }
 
 .hamburger {
@@ -107,7 +119,7 @@ a {
 
 .bar {
     display: block;
-    width: 25px;
+    width: 30px;
     height: 3px;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
@@ -118,6 +130,7 @@ a {
 @media (max-width: 768px) {
     .navbar {
         width: auto;
+        padding: 0 40px;
     }
 
     .hamburger {
@@ -142,15 +155,21 @@ a {
         bottom: 0;
         right: -100%;
         gap: 0;
+        justify-content: flex-start;
         flex-direction: column;
-        background-color: rgba(103, 162, 240, 0.377);
+        background-color: rgba(48, 86, 136, 0.87);
         width: 100%;
         text-align: center;
         transition: 0.3s;
     }
 
     .nav-item {
-        margin: 16px;
+        margin: 10px;
+        height: 40px;
+    }
+
+    .nav-link {
+        font-size: 20px;
     }
 
     .nav-menu.active {

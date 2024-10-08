@@ -89,4 +89,53 @@
 .home_right_img img {
     width: 400px;
 }
+
+@media (max-width: 768px) {
+    .home_banner_area {
+        width: auto;
+    }
+
+    .banner_inner {
+        flex-direction: column;
+        padding: 0 40px;
+    }
+
+    .banner_content {
+        padding-bottom: 30px;
+    }
+
+    .banner_content h3 {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .banner_content h3::after {
+        width: 150px;
+        left: 40%;
+    }
+
+    .banner_content h1 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: bold
+    }
+
+    .banner_content h5 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .banner_content .download-btn {
+
+        padding: 8px 20px;
+    }
+
+    .banner_content .download-btn a {
+        font-size: 16px;
+    }
+
+    .home_right_img img {
+        width: 300px;
+    }
+}
 </style>
