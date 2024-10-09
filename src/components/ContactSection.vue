@@ -5,9 +5,9 @@
                 <div class="contact-area">
                     <div class="title">
                         <h2>Contact Me</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptates,
-                            modi
-                            facilis excepturi facere est natus accusantium doloribus, .
+                        <p>
+                            If you have any questions or need further information, please feel free
+                            to reach out to me at this email address and Phone number.
                         </p>
                     </div>
                     <div class="contact-info">
@@ -53,7 +53,6 @@
     margin: 0 auto;
 }
 
-.contact-area {}
 
 .title {
     text-align: center;
@@ -64,6 +63,7 @@
 .title h2 {
     font-size: 30px;
     color: #fff;
+    font-weight: bold;
 }
 
 .title p {
@@ -106,5 +106,54 @@
 .contact-info a .text {
     color: #fff;
     font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 40px;
+    }
+
+    .contact-inner {
+        width: auto;
+    }
+
+    .title {
+        width: auto;
+    }
+
+    .title h2 {
+        font-size: 24px;
+    }
+
+    .title p {
+        font-size: 14px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 25px;
+    }
+
+    .contact-info a {
+        gap: 10px;
+        width: auto;
+        flex-direction: column;
+    }
+
+    .contact-info a .icon {
+        padding: 14px 16px;
+    }
+
+
+    .contact-info a .icon:hover {
+        padding: 16px 18px;
+    }
+
+
+    .contact-info a .text {
+        font-size: 12px;
+        text-align: center;
+    }
 }
 </style>

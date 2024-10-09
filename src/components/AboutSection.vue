@@ -11,8 +11,9 @@
                     <p>
                         I thrive on challenges! As a dedicated web application designer and
                         front-end developer, I see working under pressure as an opportunity to
-                        excel. I'm passionate about HTML, CSS, SCSS, Bootstrap, Tailwind CSS,
-                        JavaScript, Vue.js, Nuxt.js, and more, using my skills to create engaging
+                        excel. I'm passionate about <span> HTML, CSS, SCSS, Bootstrap, Tailwind CSS,
+                            JavaScript, Vue.js, Nuxt.js,</span> and more, using my skills to create
+                        engaging
                         digital experiences.
 
                     </p>
@@ -73,6 +74,11 @@
 .about_content .main_title p {
     font-size: 16px;
     padding-bottom: 15px;
+}
+
+.about_content .main_title p span {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .about_content .main_title .btn {
