@@ -1,7 +1,11 @@
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
 import { ref } from 'vue';
 const isMenuOpen = ref(false);
+const isActiveLink = (routePath) => {
+    const route = useRoute();
+    return route.path === routePath;
+}
 </script>
 
 <template>
@@ -14,16 +18,26 @@ const isMenuOpen = ref(false);
             <ul class="nav-menu" :class="{ 'active': isMenuOpen }"
                 @click.prevent="isMenuOpen = !isMenuOpen">
                 <li class="nav-item">
-                    <RouterLink to="/" class="nav-link">Home</RouterLink>
+                    <RouterLink to="/"
+                        :class="[isActiveLink('/') ? 'nav-link-active' : 'nav-link']">
+                        Home</RouterLink>
                 </li>
                 <li class="nav-item">
-                    <RouterLink to="/about" class="nav-link">About</RouterLink>
+                    <RouterLink to="/about"
+                        :class="[isActiveLink('/about') ? 'nav-link-active' : 'nav-link']">About
+                    </RouterLink>
                 </li>
                 <li class="nav-item">
-                    <RouterLink to="/experience" class="nav-link">Experience</RouterLink>
+                    <RouterLink to="/experience"
+                        :class="[isActiveLink('/experience') ? 'nav-link-active' : 'nav-link']">
+                        Experience
+                    </RouterLink>
                 </li>
                 <li class="nav-item">
-                    <RouterLink to="/contact" class="nav-link">Contacts</RouterLink>
+                    <RouterLink to="/contacts"
+                        :class="[isActiveLink('/contacts') ? 'nav-link-active' : 'nav-link']">
+                        Contacts
+                    </RouterLink>
                 </li>
             </ul>
 
@@ -82,23 +96,31 @@ a {
 }
 
 .nav-item {
-    height: 70px;
     display: flex;
     align-items: center;
-    padding: 0 30px;
-}
-
-.nav-item .active {
-    background: red;
 }
 
 .nav-link {
     transition: 0.7s ease;
     font-size: 18px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
 }
 
 .nav-link:hover {
-    color: rgb(206, 218, 230);
+    background: rgb(1, 51, 116);
+}
+
+.nav-link-active {
+    background: rgb(1, 51, 116);
+    font-size: 18px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
 }
 
 .hamburger {

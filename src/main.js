@@ -1,10 +1,12 @@
 import './assets/main.css';
 
-import 'primeicons/primeicons.css'
+import 'primeicons/primeicons.css';
+
+import 'aos/dist/aos.css';
 
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 
 import App from './App.vue'
 import router from './router'

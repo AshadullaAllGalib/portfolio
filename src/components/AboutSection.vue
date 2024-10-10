@@ -2,11 +2,11 @@
     <section class="about">
         <div class="about_area">
             <div class="about_content">
-                <div class="about_img">
+                <div class="about_img" data-aos="fade-right" data-aos-duration="1000">
                     <img class="" src="../assets/images/galib.jpg" alt="">
                 </div>
 
-                <div class="main_title">
+                <div class="main_title" data-aos="fade-left" data-aos-duration="1000">
                     <h2>let’s Introduce about myself</h2>
                     <p>
                         I thrive on challenges! As a dedicated web application designer and
@@ -30,7 +30,12 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
+import AOS from "aos";
 
+onMounted(() => {
+    AOS.init();
+})
 </script>
 
 <style scoped>

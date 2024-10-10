@@ -1,6 +1,7 @@
 <template>
-    <section class="experience">
-        <div class="title">
+    <section class="experience" data-aos="fade-up" data-aos-anchor-placement="center-bottom"
+        data-aos-duration="1500">
+        <div class="title" data-aos="fade-right" data-aos-duration="1500">
             <h2>Work Experience</h2>
             <p>
                 I worked as a Jr. Software Engineer at <span>Singularity Limited</span>. August 2021
@@ -12,7 +13,7 @@
                 maintaining and improving existing ones.
             </p>
         </div>
-        <div class="projects">
+        <div class="projects" data-aos="fade-left" data-aos-duration="1500">
 
             <div class="project-item">
                 <a href="https://ipdc.com/" target="_blank">
@@ -36,7 +37,12 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
+import AOS from "aos";
 
+onMounted(() => {
+    AOS.init();
+})
 </script>
 
 <style scoped>

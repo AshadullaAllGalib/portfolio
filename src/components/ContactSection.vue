@@ -2,7 +2,7 @@
     <section>
         <div class="contact">
             <div class="contact-inner">
-                <div class="contact-area">
+                <div class="contact-area" data-aos="zoom-out" data-aos-duration="1000">
                     <div class="title">
                         <h2>Contact Me</h2>
                         <p>
@@ -39,7 +39,12 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
+import AOS from "aos";
 
+onMounted(() => {
+    AOS.init();
+})
 </script>
 
 <style scoped>

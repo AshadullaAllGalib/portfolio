@@ -2,7 +2,7 @@
     <section class="home_banner_area">
         <div class="banner_inner">
 
-            <div class="banner_content">
+            <div class="banner_content" data-aos="fade-up" data-aos-duration="1000">
                 <h3 class="text-uppercase">HELLO</h3>
                 <h1 class="text-uppercase">I AM ASHADULLA ALL GALIB</h1>
                 <h5 class="text-uppercase">FRONT-END DEVELOPER</h5>
@@ -11,7 +11,7 @@
                 </div>
             </div>
 
-            <div class="home_right_img">
+            <div class="home_right_img" data-aos="fade-down" data-aos-duration="1000">
                 <img class="" src="../assets/images/hero-right.png" alt="">
             </div>
 
@@ -20,6 +20,12 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
+import AOS from "aos";
+
+onMounted(() => {
+    AOS.init();
+})
 </script>
 
 <style scoped>
