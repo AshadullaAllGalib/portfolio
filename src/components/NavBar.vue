@@ -1,40 +1,29 @@
 <script setup>
+import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
 const isMenuOpen = ref(false);
-// const hamburger = ref(document.querySelector(".hamburger"));
-// const navMenu = ref(document.querySelector(".nav-menu"));
-
-// hamburger.addEventListener("click", () => {
-//     hamburger.classList.toggle("active");
-//     navMenu.classList.toggle("active");
-// })
-
-// document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-//     hamburger.classList.remove("active");
-//     navMenu.classList.remove("active");
-// }))
-
 </script>
 
 <template>
     <header>
         <nav class="navbar">
-            <a href="#" class="nav-logo">
+            <RouterLink to="/" class="nav-logo">
                 <img src="../assets/images/logo.PNG" alt="Logo" />
-            </a>
+            </RouterLink>
 
-            <ul class="nav-menu" :class="{ 'active': isMenuOpen }">
+            <ul class="nav-menu" :class="{ 'active': isMenuOpen }"
+                @click.prevent="isMenuOpen = !isMenuOpen">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <RouterLink to="/" class="nav-link">Home</RouterLink>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
+                    <RouterLink to="/about" class="nav-link">About</RouterLink>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Experience</a>
+                    <RouterLink to="/experience" class="nav-link">Experience</RouterLink>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Contacts</a>
+                    <RouterLink to="/contact" class="nav-link">Contacts</RouterLink>
                 </li>
             </ul>
 

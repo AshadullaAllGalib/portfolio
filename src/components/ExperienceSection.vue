@@ -15,13 +15,13 @@
         <div class="projects">
 
             <div class="project-item">
-                <a href="#">
+                <a href="https://ipdc.com/" target="_blank">
                     <img src="../assets/images/ipdc.png" alt="">
                 </a>
-                <a href="#">
+                <a href="https://nagad.com.bd/" target="_blank">
                     <img src="../assets/images/nagad.png" alt="">
                 </a>
-                <a href="#">
+                <a href="https://the-marvel.com/" target="_blank">
                     <img src="../assets/images/marvel-logo.png" alt="">
                 </a>
             </div>
@@ -72,6 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
@@ -101,5 +102,32 @@
 
 .technology p span {
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .experience {
+        width: auto;
+        padding: 30px 40px;
+    }
+
+    .title {
+        padding-bottom: 30px;
+    }
+
+    .title h2 {
+        font-size: 24px;
+    }
+
+    .title p {
+        font-size: 14px;
+    }
+
+    .project-item {
+        gap: 20px;
+    }
+
+    .technology p {
+        font-size: 14px;
+    }
 }
 </style>

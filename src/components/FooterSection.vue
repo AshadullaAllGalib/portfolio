@@ -4,17 +4,17 @@
             <div class="footer-top">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/ashadullaa/" target="_blank">
                             <img src="../assets/images/linkdin.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://www.facebook.com/ashadulla.allgalib.5" target="_blank">
                             <img src="../assets/images/facebook.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://github.com/AshadullaAllGalib" target="_blank">
                             <img src="../assets/images/git.png" alt="">
                         </a>
                     </li>
