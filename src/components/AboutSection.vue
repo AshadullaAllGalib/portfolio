@@ -135,10 +135,11 @@ onMounted(() => {
         line-height: 35px;
     }
 
-
-
-
-
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 
 }
 </style>

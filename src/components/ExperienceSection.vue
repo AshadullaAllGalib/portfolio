@@ -135,5 +135,11 @@ onMounted(() => {
     .technology p {
         font-size: 14px;
     }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
 </style>
