@@ -12,7 +12,7 @@ const isActiveLink = (routePath) => {
     <header>
         <nav class="navbar">
             <RouterLink to="/" class="nav-logo">
-                <img src="../assets/images/logo.PNG" alt="Logo" />
+                <img src="../assets/images/logo.png" alt="Logo" />
             </RouterLink>
 
             <ul class="nav-menu" :class="{ 'active': isMenuOpen }"
